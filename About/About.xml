@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>[O21] Stuffed Floors Lite</name>
+	<author>Neronix17</author>
+	<packageId>Neronix17.StuffedFloorsLite</packageId>
+	<description>Removes the extra floors added by Stuffed Floors, leaving only vanilla ones and those from other mods. Also makes the vanilla wood floor stuffed, since Stuffed Floors for some reason didn't do so.</description>
+	<supportedVersions>
+		<li>1.3</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>fluffy.stuffedfloors</packageId>
+			<displayName>Stuffed Floors</displayName>
+			<downloadUrl>https://ludeon.com/forums/index.php?topic=16120</downloadUrl>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/853043503</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>fluffy.stuffedfloors</li>
+	</loadAfter>
+</ModMetaData>

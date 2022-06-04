@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+		<success>Normal</success>
+		<operations>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/StuffedFloors.FloorTypeDef[defName="StuffedFloorsMetalGrate" or defName="StuffedFloorsMetalSmallPlate" or defName="StuffedFloorsMetalShapedPlate" or defName="StuffedStoneRoughCobblestones" or defName="StuffedStoneBricks" or defName="StuffedStoneBricksHerringBone" or defName="StuffedStoneBricksUneven" or defName="StuffedStoneRoughTiles" or defName="StuffedStoneSlabs" or defName="StuffedStoneStaggered" or defName="StuffedStoneAlternating" or defName="StuffedStoneHerringbone" or defName="StuffedStoneDigital" or defName="StuffedStoneDiamond" or defName="StuffedStoneTiles" or defName="StuffedStoneMosaic" or defName="StuffedStoneCircle" or defName="StuffedStoneHex" or defName="StuffedStoneCobblestone" or defName="StuffedStoneArabesque" or defName="StuffedPlywoodFloor" or defName="StuffedWoodFloorRough" or defName="StuffedWoodFloorBasic" or defName="StuffedWoodFloorRoughHorizontal" or defName="StuffedWoodFloorHorizontal" or defName="StuffedWoodFloorRustic" or defName="StuffedWoodFloorParquetHorizontal" or defName="StuffedWoodFloorParquetMosaic" and defName="StuffedStoneSmallBricks"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TerrainDef[defName="WoodPlankFloor"]</xpath>
+				<value>
+					<layerable>true</layerable>
+					<affordances>
+						<li>Light</li>
+						<li>Medium</li>
+						<li>Heavy</li>
+					</affordances>
+					<fertility>0</fertility>
+					<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+					<statsAffectedByStuff>
+						<li>WorkToBuild</li>
+						<li>Beauty</li>
+						<li>Cleanliness</li>
+						<li>MarketValue</li>
+						<li>Flammability</li>
+					</statsAffectedByStuff>
+					<stuffCategories>
+						<li>Woody</li>
+					</stuffCategories>
+					<stuffCost>3</stuffCost>
+					<tags>
+						<li>Floor</li>
+					</tags>
+				</value>
+			</li>
+			<li Class="PatchOperationRemove">
+				<xpath>/Defs/TerrainDef[defName="WoodPlankFloor"]/costList</xpath>
+			</li>
+			<li Class="PatchOperationSetName">
+				<xpath>/Defs/TerrainDef[defName="WoodPlankFloor"]</xpath>
+				<name>StuffedFloors.FloorTypeDef</name>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>
